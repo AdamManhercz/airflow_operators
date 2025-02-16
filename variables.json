@@ -1,5 +1,6 @@
 {
-  "github_conn_id": "gith",
-  "owner": "repo_owner",
-  "base_url": "base_url"
+  "_description": "JSON configuration for creating Airflow variables like connection ID, repo owner and base url",
+  "github_conn": "connection_id",
+  "owner": "owner",
+  "base_url": "https://api.github.com/repos"
 }
