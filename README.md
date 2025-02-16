@@ -8,25 +8,24 @@ The environment is built using Docker and orchestrated via Docker Compose.
 
 ## Repository Structure
 
-my_airflow_project/
-│── dags/                      # Sample DAG files
-│── logs/                      # Airflow logs
-│── src/                       # Custom Airflow operators as a Python package
-│   ├── custom_operators/     # Package name
-│   │   ├── __init__.py        # Plugin initialization
-│   │   ├── github_base_operator.py     # Base operator
-│   │   ├── auth_operator.py       # Operator for authentication
-│   │   ├── branch_operator.py         # Operator to manage branches
-│   │   ├── wip_operator.py         # Operator for work-in-progress tasks
-│   │   ├── commit_retriever_operator.py         # Operator to retrieve commits
-│   │   ├── issue_operator.py         # Operator to retrieve GitHub issues
-│── requirements.txt           # Python dependencies
-│── setup.py                   # Packaging configuration
-│── secrets.json             # Airflow connection secrets (e.g., GitHub tokens)
-│── variables.json             # Airflow variables configuration
-│── docker-compose.yaml        # Docker Compose configuration
-│── Dockerfile                 # Custom Docker image definition
-│── README.md                  # Project documentation
+├── src
+│   ├── controller
+│   │   ├── **/*.css
+│   ├── views
+│   ├── model
+│   ├── index.js
+├── public
+│   ├── css
+│   │   ├── **/*.css
+│   ├── images
+│   ├── js
+│   ├── index.html
+├── dist (or build
+├── node_modules
+├── package.json
+├── package-lock.json
+└── .gitignore
+
 
 ## Key Features
 
