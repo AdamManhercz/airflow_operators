@@ -8,23 +8,39 @@ The environment is built using Docker and orchestrated via Docker Compose.
 
 ## Repository Structure
 
-├── src
-│   ├── controller
-│   │   ├── **/*.css
-│   ├── views
-│   ├── model
-│   ├── index.js
-├── public
-│   ├── css
-│   │   ├── **/*.css
-│   ├── images
-│   ├── js
-│   ├── index.html
-├── dist (or build
-├── node_modules
-├── package.json
-├── package-lock.json
-└── .gitignore
+### 1. `dags/`
+Contains sample DAG files that define workflows using Airflow.
+
+### 2. `logs/`
+Directory for Airflow logs generated during DAG execution.
+
+### 3. `src/custom_operators/`
+A Python package for custom Airflow operators. Notable files:
+- `github_base_operator.py`: Base class for GitHub-related operators.
+- `auth_operator.py`: Handles authentication with GitHub API.
+- `branch_operator.py`: Manages GitHub branches.
+- `wip_operator.py`: Tracks work-in-progress tasks.
+- `commit_retriever_operator.py`: Retrieves commit data from GitHub.
+- `issue_operator.py`: Retrieves issue data from GitHub.
+
+### 4. `requirements.txt`
+Lists Python dependencies for the project.
+
+### 5. `setup.py`
+Defines the packaging configuration for custom operators as a Python package.
+
+### 6. `secrets.json`
+Contains secrets such as GitHub API tokens and Airflow connection settings.
+
+### 7. `variables.json`
+Holds Airflow variable configurations, e.g., repository names.
+
+### 8. `docker-compose.yaml`
+Configuration file for setting up Airflow, PostgreSQL, and Redis services via Docker Compose.
+
+### 9. `Dockerfile`
+Specifies custom Docker image for the project.
+
 
 
 ## Key Features
